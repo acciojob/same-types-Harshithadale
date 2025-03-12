@@ -1,6 +1,6 @@
 function isSameType(value1, value2) {
-    value1 = Number(value1);
-    value2 = Number(value2);
+    value1 = value1 === "" || isNaN(value1) ? value1 : Number(value1);
+    value2 = value2 === "" || isNaN(value2) ? value2 : Number(value2);
     if (Number.isNaN(value1) && Number.isNaN(value2)) {
         return true;
     } else if (typeof value1 === typeof value2) {
